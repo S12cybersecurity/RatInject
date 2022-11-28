@@ -12,11 +12,19 @@ This tool gains persistence of an executable in Windows by exploiting 4 differen
 
 **Runkey:**
 
+Run Register, this register are one of the most important in Windows system, this register is execute many times during operation, but especially when you start the machine.
+
 **WinLogon:**
+
+Winlogon is a Windows component which handles various activities such as the Logon, Logoff, loading user profile, shutdown, lock screen... This execute your exe every time than user Logon, Logoff, loading user profile during authentication, shutdown, lock screen and more...
 
 **Image File Execution Options (Open):**
 
+This way allow you to execute your binary when user open any defined process or binary. In this case i cexecute exe when user open calc.exe process.
+
 **Image File Execution Options (Close):**
+
+This way allow you to execute your binary when user close any defined process or binary. In this case i execute exe when user finish explorer.exe process.
 
 # Compile
 
