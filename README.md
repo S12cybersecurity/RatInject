@@ -35,3 +35,25 @@ x86_64-w64-mingw32-g++ persistence.cpp -o ratinject.exe -static-libstdc++ -stati
 ![image](https://user-images.githubusercontent.com/79543461/204348350-3f271288-daea-4dc5-aee4-882e143802b4.png)
 
 # Use
+
+To use this tool you have to execute the command with its parameters as follows:
+
+Ways:
+
+- Winlogon
+- Run
+- Open
+- Close
+
+All Ways (shell.exe is evil file to execute with persistence (absolut path)):
+
+**ratinject.exe C:\temp\shell.exe All**
+
+Only One:
+
+**ratinject.exe C:\temp\shell.exe Winlogon/Run/Open/Close**
+
+Or mix (example, you can use all possible mixes):
+
+**ratinject.exe C:\temp\shell.exe Run Open Close**
+
