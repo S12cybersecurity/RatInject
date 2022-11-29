@@ -45,13 +45,27 @@ Ways:
 - Open
 - Close
 
+
+
+Recommended:
+
+**ratinject.exe C:\temp\shell.exe Run Open Close**
+
+Winlogon can create bugs in OS.
+
+
+
 All Ways (shell.exe is evil file to execute with persistence (absolut path)):
 
 **ratinject.exe C:\temp\shell.exe All**
 
+
+
 Only One:
 
 **ratinject.exe C:\temp\shell.exe Winlogon/Run/Open/Close**
+
+
 
 Or mix (example, you can use all possible mixes):
 
